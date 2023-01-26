@@ -13,25 +13,37 @@ module.exports = (sequelize) => {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique:true,
     },
-    vida:{
+    life:{
       type:DataTypes.INTEGER,
     },
-    ataque:{
+    attack:{
       type:DataTypes.INTEGER,
     },
-    defensa:{
+    defense:{
       type:DataTypes.INTEGER,
     },
-    velocidad:{
+    speed:{
       type:DataTypes.INTEGER,
     },
-    altura:{
+    height:{
       type:DataTypes.INTEGER,
     },
-    peso:{
+    weight:{
       type:DataTypes.INTEGER,
     },
-  });
+    image: {
+      type: DataTypes.STRING,
+      defaultValue:
+        "https://vader.news/__export/1588965166057/sites/gadgets/img/2020/05/08/2-25193_pokemon-ball-transparent-background-transparent-background-pokeball-png.png_423682103.png",
+  
+    },
+    create:{
+      type:DataTypes.BOOLEAN,
+      defaultValue:true}
+    
+  },
+  {timestamps: false},);
 
 }
