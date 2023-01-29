@@ -9,7 +9,6 @@ import {
     ORDER_BY_ATTACK,
     FILTER_BY_TYPE,
     ERROR,
-    getAllPokemons,
   } from "./actions";
 
   const initialState = {
@@ -62,10 +61,13 @@ const rootReducer=(state=initialState, action)=>{
             let allTPokemons = state.pokemonsForFilter;
             let filTPokemons = allTPokemons.filter( pt => pt.Types.map( p => p.name ).includes( action.payload ))
             let filterPokemons = action.payload === "All" ? allTPokemons : filTPokemons
+            
             if (!filterPokemons.length) { filterPokemons = [{msg: "no pokemons"}]}
+            console.log(filterPokemons)
             return {
                 ...state,
                 pokemons: filterPokemons
+                
             };
             case ORDER_ALPHABETICALLY:
               let allPokemons = state.pokemons;
@@ -100,9 +102,36 @@ const rootReducer=(state=initialState, action)=>{
               case CREATE_POKEMON: 
          return {
         ...state, pokemons:state.pokemons
-        }
+      }
+              case FILTER_CREATED:
+                const array = [...state.pokemonsForFilter];
+                let FilterPokemons=[];
+                if (action.payload === "created") {
+                  FilterPokemons = array.filter((pokemon) => {
+                    return pokemon.create===true;
+                  });
+                  if (!FilterPokemons.length) {
+                    return {
+                      ...state,
+                      error:
+                        FilterPokemons.length > 0
+                          ? false
+                          : ` Does not exist
+                          pokemons created`,
+                    };
+                  }
+                } else {
+                  FilterPokemons = array.filter((pokemon) => {
+                    return pokemon.create===false;
+                  });
+                }
+                return {
+                  ...state,
+                  pokemons: FilterPokemons,
+                };
           default:
             return { ...state };
+          
 
 }
 }

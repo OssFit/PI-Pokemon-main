@@ -8,15 +8,15 @@ export function Paginado({pokemonsPerPage, allPokemons, paginado}){
     }
 
     return(
-        <nav>
+        <div>
             <ul>
                 { pageNumbers &&
                 pageNumbers.map(number =>(
                     <span className="number" key={number}>
-                        <button onClick={()=> paginado(number)}> {number } </button>
+                        <button onClick={()=> paginado(number)}> {number} </button>
                     </span>
                 ))}
             </ul>
-        </nav>
+        </div>
     )
 }

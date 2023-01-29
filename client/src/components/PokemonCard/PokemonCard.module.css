@@ -1,0 +1,87 @@
+.divPrincipal{
+  background-image: url("../Imagenes/pokeball1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position:center;
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 400px;
+  margin-top: 5em;
+
+  
+ 
+}
+
+.container{
+  display: flex;
+}
+
+.idContainer{
+  text-align: center;
+  margin-left: 2.5em;
+}
+
+.nameContainer{
+text-align: center; 
+margin-top: 1em;
+
+
+}
+
+.typeContainer{
+  text-align: center;
+  max-width: 100px;
+  margin-left: 1em;
+
+}
+
+.idId{
+  color:aliceblue;
+ border-radius: 50%;
+ width: 40px;
+height: 30px;
+  background-color: grey;
+  border-style: solid;
+  border-color: aliceblue;
+  size: 20px;
+  
+}
+
+.name{
+  border-style: solid;
+  border-color: aliceblue;
+  border-width: 3px;
+  border-radius: 35px;
+  background-color: black;
+  color: aliceblue;
+  padding: 3px;
+  
+}
+
+.type{
+  border-style: solid;
+  border-color: aliceblue;
+  border-width: 3px;
+  border-radius: 35px;
+  background-color: black;
+  color: aliceblue;
+  padding: 1px;
+  list-style-type: none;
+  margin-top: 10px;
+
+}
+
+.navLink{
+text-decoration: none;
+}
+
+.img{
+  transition:0.5s;
+
+}
+.img:hover{
+  transform: scale(2);
+}
+

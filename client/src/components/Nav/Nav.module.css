@@ -1,0 +1,26 @@
+.divPrincipal{
+    background-color: rgb(170, 0, 0);
+    border-bottom: 5px;
+    border-color: black;
+    border-style: solid;
+    height: 120px;
+}
+
+.button1,.button2{
+    background-color: rgb(5, 113, 255);
+    color: aliceblue;
+}
+.filterAbc,.filterType,.filterStrength,.created{
+    background-color: rgb(5, 113, 255);
+    color: aliceblue;
+    border-style: solid;
+    border-color: black;
+}
+
+.contenedorSearch{
+    display: flex;
+    margin-top: -2em;
+}
+.searchBar{
+    text-align: left;
+}

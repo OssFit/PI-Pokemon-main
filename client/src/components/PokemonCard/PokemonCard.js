@@ -1,15 +1,43 @@
+import style from "./PokemonCard.module.css"
+import { NavLink } from 'react-router-dom'
+
 
 export function PokemonCard({ name, image, type, id}) {
+
+  
+
+
   return (
-    <div>
-        <h3>{id}</h3>
-        <h4>{name}</h4>
-        
+    <div className={style.divPrincipal}key={id}>
+     <div className={style.section}>
+     
+        <div className={style.container}>
+      <NavLink  className={style.navLink}to={`/home/${id}`}>
+        <div className={style.idContainer}>
+        <p className={style.idId}>{id}</p>
+        </div>
+        <div className={style.nameContainer}>
+        <span className={style.name}>{name}</span>
+        </div>
+
+       
+
+        <div className={style.divImg}>
+        <img className={style.img}src={image} alt={name} width="150px" height="190px" />
+        </div>
+
+       
+
+        <div className={style.typeContainer}>      
           {type.map((e) => {
-            return (<p>{e.name}</p>);
+            return (<li className={style.type}key={e.name}>{e.name}</li>);
           })}
-      
-        <img src={image} alt={name} width="200px" height="250px" />
+      </div>  
+
+        </NavLink>
+        </div>
+        </div>
+        
     </div>
   );
 }

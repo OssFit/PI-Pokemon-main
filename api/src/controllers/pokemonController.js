@@ -14,10 +14,33 @@ const getApiData=async()=>{
    let pokeApi = await axios.get('https://pokeapi.co/api/v2/pokemon?offset=0&limit=150');
    let pokeApiUrl = pokeApi.data.results.map((el) => axios.get(el.url));
      
-     let pokeApiInfo = await axios.all(pokeApiUrl);
-     let pokeDB= await Pokemon.findAll({include:Type})
+   let pokeDB= await Pokemon.findAll({include:Type})
 
-         
+   let dataFromDB = pokeDB?.map((element) => {
+    return {
+       id: element.id,
+       name:
+       element.name.trim().toLowerCase().charAt(0).toUpperCase() +
+       element.name.substring(1), //me traigo su name con el fin de que quede asi = EJEMPLO: "andres" -> "Andres"
+       hp: element.hp,
+       attack: element.attack,
+       defense: element.defense,
+       speed: element.speed,
+       height: element.height,
+       weight: element.weight,
+       Types: element.Types.map((index) => {
+        return {name:index.name};
+      }), //Aqui pido que me traiga los nombres de sus type de la db
+       image: element.image,
+       createdInDb: true,
+    }
+  });
+   
+   
+   console.log(dataFromDB)
+   
+   let pokeApiInfo = await axios.all(pokeApiUrl);
+   
    let apiData = pokeApiInfo.map((el) => {
        let pokemon = el.data
        let obj = {
@@ -41,7 +64,7 @@ const getApiData=async()=>{
        
      })
      
-     const allPokemons=apiData.concat(pokeDB);
+     const allPokemons=apiData.concat(dataFromDB);
      return allPokemons;
    }
   

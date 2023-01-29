@@ -35,10 +35,10 @@ export function getAllPokemons(){
 export function getPokemonById(id){
   return async function(dispatch){
     try {
-      const json= await axios.get(`/pokemons/${id}`);
+      const json= await axios.get(`http://localhost:3001/pokemons/${id}`);
       return dispatch({
         type:GET_POKEMON_BY_ID,
-        payload:json.data[0]
+        payload:json.data.pop()
       })
 
     } catch (error) {
@@ -55,17 +55,17 @@ export function getPokemonById(id){
 export function getPokemonByName(name){
   return async function(dispatch){
     try {
-      const json=await axios.get(`/pokemons?name=${name}`);
+      const json=await axios.get(`http://localhost:3001/pokemons?name=${name}`);
       return dispatch({
         type:GET_POKEMON_BY_NAME,
-        PAYLOAD:json.data[0]
+        payload:json.data
       })
       
-    } catch (error) {
-    return dispatch({
-      type:ERROR,
-      payload:"Name was not found"
-    })      
+     } catch (error) {
+     return dispatch({
+     type:ERROR,
+     payload:"Name was not found"
+     })      
     }
   }
 }
@@ -110,4 +110,12 @@ export function createPokemon(data) {
     const json = await axios.post("http://localhost:3001/pokemons", data);
     return json;
   };
+}
+
+export function filterCreated(payload){
+  return{
+  type:FILTER_CREATED,
+  payload
+  }
+
 }

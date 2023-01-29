@@ -1,7 +1,16 @@
-.fondo{
+/* .fondo{
     width:100vw;
     height:100vh; 
-    background-image: url('../Imagenes/Pokedex_cerrado.png');
+    background-image: url('../Imagenes/wallpaperbetter.com_2880x1620.jpg');
+    background-position: center;
+    
     
 
+} */
+.video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
 }
