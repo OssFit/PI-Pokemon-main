@@ -1,13 +1,12 @@
 import { useState }from 'react';
 import { getPokemonByName } from '../../redux/actions';
 import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
 import style from './SearchBar.module.css'
 
 export default function SearchBar({setCurrentPage}){
 const dispatch=useDispatch();
 const[name, setName]=useState("");
-const history=useHistory();
+
 
 
 const handlerChange=(event)=>{

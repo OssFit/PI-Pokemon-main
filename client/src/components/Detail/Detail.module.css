@@ -1,0 +1,21 @@
+/* .divPrincipal{
+    display: flex;
+ justify-content: center;
+}
+
+.detailCard{
+ align-content: space-between;
+} */
+
+.button{
+    margin-top: 1em;
+}
+
+.back{
+    border-style: solid;
+    border-color: aliceblue;
+    color: aliceblue;
+    background-color: black;
+    border-radius: 5px;
+    border-width: 2px;
+}

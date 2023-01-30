@@ -7,6 +7,12 @@
     
 
 } */
+
+@font-face{
+    font-family: "Pokemon1";
+    src:url(../Fonts/Pokemon\ Solid.ttf)
+}
+
 .video{
     position: fixed;
     right: 0;
@@ -14,3 +20,23 @@
     min-width: 100%;
     min-height: 100%;
 }
+ 
+ /* .ready,.goHome{
+    position: absolute;
+    color:#ffcc03;
+    margin-left: 1em;
+    -webkit-text-stroke: 1px rgb(0, 106, 255); 
+    font-family: Pokemon1;
+    font-size: 60px
+    
+}  */
+.home{
+     margin-top: 3em;
+     position: absolute;
+}
+/* img{
+    position: absolute;
+ margin-left: -22em; 
+ margin-top:9em 
+}
+   */

@@ -15,14 +15,16 @@ export function Nav ({types, setOrder, setCurrentPage}) {
         //e.preventDefault();
         dispatch(orderAlphabetically(e.target.value));
         setCurrentPage(1);
-        setOrder(`Ordenado by ${e.target.value}`)
+        setOrder(`Ordenado by ${e.target.value}`);
+        e.target.value='all'
     }
 
     function handleOrderByPower(e){
         //e.preventDefault();
         dispatch(orderByAttack(e.target.value));
         setCurrentPage(1);
-        setOrder(`Ordenado by ${e.target.value}`)
+        setOrder(`Ordenado by ${e.target.value}`);
+        e.target.value='all'
     }
 
      function handleFilterType (e){
@@ -30,7 +32,8 @@ export function Nav ({types, setOrder, setCurrentPage}) {
         dispatch(filterByType(e.target.value));
        
         setCurrentPage(1);
-        setOrder(`Filter by ${e.target.value}`)
+        setOrder(`Filter by ${e.target.value}`);
+        e.target.value='all';
     }
 
     const handleCreated = (e) => {
@@ -38,6 +41,7 @@ export function Nav ({types, setOrder, setCurrentPage}) {
         dispatch(filterCreated(e.target.value));
         setCurrentPage(1);
         history.push("/home");
+        e.target.value='all';
       };
 
       const resetFilters = () => {
@@ -50,40 +54,42 @@ export function Nav ({types, setOrder, setCurrentPage}) {
 
     return <div className={style.divPrincipal}>
         <select className={style.filterAbc} onChange={(e) => handleOrderByAbc(e)}>
-            <option className='option0' value="all">Alphabetical Order</option>
-            <option className='option' value="asc">A to Z</option>
-            <option className='option' value="desc">Z to A</option>
+            <option hidden  value="all">Alphabetical Order</option>
+            <option  value="asc">A to Z</option>
+            <option  value="desc">Z to A</option>
         </select>
         
         <select className={style.filterType} onChange={(e) => handleFilterType(e)}>
-            <option className='option0' value="All">Type Filter</option>
+            <option hidden value="all">Types Filter</option>
             {
                 types?.map( pt => {
-                    return <option className='option' value={pt.name} key={pt.id}>{pt.name}</option>
+                    return <option value={pt.name} key={pt.id}>{pt.name}</option>
                 })
             }
         </select>
     
          <select className={style.filterStrength} onChange={(e) => handleOrderByPower(e)}> 
-            <option className='option0' value="all">Strength Order</option>
-            <option className='option' value="AttackAsc">Powerfull</option>
-            <option className='option' value="AttackDesc">Weak</option>
+            <option hidden value="all">Strength Order</option>
+            <option value="AttackAsc">Powerfull</option>
+            <option value="AttackDesc">Weak</option>
         </select>
 
         <select className={style.created}onChange={(e) => handleCreated(e)}>
-          <option hidden>Filter by</option>
+          <option hidden value='all'>Create/Old</option>
           <option value="created">Created</option>
-          <option value="api">API</option>
+          <option value="api">Old</option>
         </select>
-        <div className={style.buttons}>
-        <button className={style.button1}onClick={() => history.push("/create")}>
-          <header>CREATE</header>
-        </button>
-
+        <div className={style.back}>
+        
         <button className={style.button2} onClick={() => resetFilters()}>
-        RESET FILTERS
+        BACK
       </button>
       </div>
+      <div className={style.create}>
+      <button className={style.button1}onClick={() => history.push("/create")}>
+          <header>CREATE</header>
+        </button>
+        </div>
     <div className={style.contenedorSearch}>
 <SearchBar className={style.SearchBar} setCurrentPage={setCurrentPage}/>
 </div>

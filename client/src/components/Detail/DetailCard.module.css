@@ -1,0 +1,51 @@
+ .divPrincipal{
+    background-image: url(../Imagenes/pokedex.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 800px;
+    width: 500px;
+    display: inline-flex;
+ }
+ 
+.img{
+    width: 15vh;
+    min-width: 30%;
+
+}
+
+ .imgContainer{
+    justify-self: center;
+    text-align: center;
+    margin-top: 13em;
+    margin-left: 9em;
+
+}
+
+
+.info{
+    text-align: justify;
+    align-self:center;
+    line-height:1px;
+    margin-top: 22em;
+    margin-left: -10.5em;
+    border-style: solid;
+    border-radius: 5px 5px 5px 30px;
+    border-color: rgb(209, 216, 222);
+    border-width: 5px;
+    color: aliceblue;
+    background-color: rgb(5, 146, 64);
+    background-size: 3px;
+    padding: 7px;
+    min-width: 300px;
+    min-height:180px
+
+
+
+} 
+/* 
+.nameContainer{
+    text-align: center;
+    align-self: center;
+} 
+   */
