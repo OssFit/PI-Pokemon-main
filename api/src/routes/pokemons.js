@@ -12,7 +12,6 @@ router.get('/', async (req, res) => {
 
 
     if (!name) {
-        console.log('trayendo todo')
         return res.status(200).send(getApi)
     }
     if (name) {

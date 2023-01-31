@@ -11,18 +11,21 @@ export default function DetailCard(){
     const pokemon=useSelector((state)=>state.pokemonDetail);
     const {name,life,attack,defense,speed,weight,height,image,Types}=pokemon;
     useEffect(() => {
-        dispatch(getPokemonById(id));},[dispatch,id])
+        dispatch(getPokemonById(id));},[dispatch,id]);
   
     
     return (
         <div className={style.divPrincipal}key={id}>
-          
+          <div className={style.idContainer}>
+            <p className={style.id}>ID:{id}</p>
+            </div>
             <div className={style.imgContainer}>
             <img className={style.img} src={image} alt={name} />
              </div> 
-         
-            <div className={style.info}>
+            <div className={style.nameContainer}>
             <h2 className={style.name}>{name}</h2>
+            </div>
+            <div className={style.info}>
             <p key='life'><b>Life: </b>{life}</p>
            
             <p key='attack'><b>Attack: </b>{attack}</p>

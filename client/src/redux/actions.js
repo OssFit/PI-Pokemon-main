@@ -1,5 +1,5 @@
-import axios from 'axios'
 
+import axios from 'axios';
 export const GET_ALL_POKEMONS = "GET_ALL_POKEMONS";
 export const GET_POKEMON_BY_ID = "GET_POKEMON_BY_ID";
 export const GET_POKEMON_BY_NAME = "GET_POKEMON_BY_NAME";
@@ -13,7 +13,7 @@ export const ORDER_BY_ATTACK = "ORDER_BY_ATTACK";
 
 
 export function getAllPokemons(){
-    return async function(dispatch){
+  return async function(dispatch){
       try {
         
         const json = await axios.get("http://localhost:3001/pokemons");

@@ -30,9 +30,9 @@ const getApiData=async()=>{
        weight: element.weight,
        Types: element.Types.map((index) => {
         return {name:index.name};
-      }), //Aqui pido que me traiga los nombres de sus type de la db
+      }), 
        image: element.image,
-       createdInDb: true,
+       create: true,
     }
   });
    

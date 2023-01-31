@@ -1,24 +1,72 @@
+@font-face{
+    font-family: "Pokedex";
+    src:url(../Fonts/Pokemon\ GB.ttf)
+}
+ 
  .divPrincipal{
     background-image: url(../Imagenes/pokedex.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    height: 800px;
-    width: 500px;
-    display: inline-flex;
+    grid-template-rows:auto;
+    border-style: solid;
+    border-width: 5px;
+    border-color: transparent;
+    height: 100vh;
+    align-content: center;
+ }
+
+ .nameContainer{
+
+    border-style: solid;
+    border-width: 3px;
+    border-color: transparent;
+    grid-row: 3/3;
+    height: 40px;
+  
+   
+ }
+
+ .name{
+    font-family: Pokedex;
+    font-size: small;
+    color: black;
+    margin-left: -2em;
+    
+ }
+ .idContainer{
+  
+   
+    grid-row: 1/1;
+    border-style: solid;
+    border-width: 3px;
+    border-color: transparent;
+    height: 250px;
  }
  
+ .id{
+    color: black;
+    font-family: Pokedex;
+    margin-top: 11em;
+    margin-left: -12em;
+   
+    
+ }
 .img{
-    width: 15vh;
-    min-width: 30%;
-
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  margin-left: -2em;
+   
 }
 
  .imgContainer{
-    justify-self: center;
-    text-align: center;
-    margin-top: 13em;
-    margin-left: 9em;
+
+    height:100px; ;
+    border-style: solid;
+    border-width: 3px;
+    border-color: transparent;
+    grid-row: 2/2;
 
 }
 
@@ -26,19 +74,27 @@
 .info{
     text-align: justify;
     align-self:center;
-    line-height:1px;
-    margin-top: 22em;
-    margin-left: -10.5em;
+    line-height:10px;
     border-style: solid;
-    border-radius: 5px 5px 5px 30px;
+    border-radius: 10px 10px 10px 35px;
     border-color: rgb(209, 216, 222);
     border-width: 5px;
     color: aliceblue;
     background-color: rgb(5, 146, 64);
     background-size: 3px;
     padding: 7px;
-    min-width: 300px;
-    min-height:180px
+    width: 300px;
+    height:225px;
+    font-family: Pokedex;
+    font-size: small;
+    position: static;
+    border-style: solid;
+    border-width: 3px;
+    border-color: transparent;
+    grid-row: 4/4;
+    margin-left: 33.5em;
+    margin-top: 4.4em;
+
 
 
 
