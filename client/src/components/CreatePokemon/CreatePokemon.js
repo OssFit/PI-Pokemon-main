@@ -117,7 +117,7 @@ const CreateForm = function () {
       } else {
         dispatch(createPokemon(input));
         setInput({});
-        alert("Let's check out ours Pokemons!");
+        alert("Let's check out our Pokemons!");
         history.push("/home");
       }
     } else if (error.name) {
@@ -128,12 +128,14 @@ const CreateForm = function () {
 
   return (
     <div className={style.divPrincipal}>
+      <div className={style.backHome}>
       <Link to={"/home"}>
-        <button className={style.backHome}> Back Home</button><br></br>
+        <button className={style.button}> Back Home</button><br></br>
       </Link>
+      </div>
       <label className={style.error} hidden={!error.name ? true : false} >
         {error.name}
-        <img src="https://www.pngmart.com/files/16/Angry-Cartoon-PNG-File.png"/>
+        <img className={style.errorImg} src="https://www.pngmart.com/files/16/Angry-Cartoon-PNG-File.png"/>
       </label>
       <div className={style.own}>
       <h1 className={style.h1}>CREATE YOUR OWN POKEMON</h1>

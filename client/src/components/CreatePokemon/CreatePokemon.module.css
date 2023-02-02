@@ -23,6 +23,7 @@
     font-family: Pokedex;
     color: aliceblue;
     border: 0;
+    position: absolute;
     
 }
 input{
@@ -52,6 +53,20 @@ input{
 }
 
 .error{
+
     color:red;
     font-weight: bolder;
+    position: fixed;
+  margin-left: -8em;
+  text-align: center;
+  align-self: center;
+}
+
+.errorImg{
+    width: 80px;
+    text-align: left;
+}
+
+.button{
+    color: black;
 }

@@ -31,7 +31,7 @@ setName("");
         <button className={style.btn3}></button>
         </div>
         <div className={style.inputContainer}>
-        <input className={style.input} value={name}type='text' onChange={(e)=>handlerChange(e)}></input>
+        <input placeholder='Find pokemon' className={style.input} value={name}type='text' onChange={(e)=>handlerChange(e)}></input>
         </div>
         </div>
      

@@ -1,7 +1,7 @@
 .divPrincipal{
-  background-image: url("../Imagenes/pokeball1.png");
+  background-image: url("../Imagenes/PokebolaCerrada.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 80%;
   background-position:center;
   display: inline-flex;
   justify-content: center;
@@ -12,6 +12,22 @@
 
   
  
+}
+
+.divPrincipal:hover{
+  transition: 0.3s;
+  background-image: url("../Imagenes/pokeball1.png");
+  
+}
+
+.img{
+  transition:0s;
+  visibility: hidden;
+
+}
+.divPrincipal:hover  .img{
+  visibility: visible;
+  transition: 0.5s;
 }
 
 .container{
@@ -77,11 +93,8 @@ height: 30px;
 text-decoration: none;
 }
 
-.img{
-  transition:0.5s;
-
-}
 .img:hover{
   transform: scale(2);
+  
 }
 

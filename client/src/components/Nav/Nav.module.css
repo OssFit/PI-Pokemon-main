@@ -18,8 +18,12 @@ border-color: rgb(0, 0, 0);
 font-size: smaller;
 margin-right: 1em;
 margin-top: -1em;
-}
 
+}
+.button1:hover{
+    box-shadow: 0 0 40px rgb(255, 221, 0)
+    
+}
 .button2{
     border-color: black;
     border-style: solid;
@@ -35,6 +39,10 @@ margin-top:-2em
     margin-left: 31em;
     margin-top: -2em;
 }
+.button2:hover{
+    color: aliceblue;
+    background-color: black;
+}
 .filterAbc,.filterType,.filterStrength,.created{
     background-color: rgb(5, 113, 255);
     color: aliceblue;
@@ -46,6 +54,10 @@ margin-top:-2em
     margin-top: 2em;
 }
 
+.filterAbc:hover,.filterType:hover,.filterStrength:hover,.created:hover{
+    transform: scale(1.1);
+
+}
 .contenedorSearch{
     display: flex;
     margin-top: -3em;

@@ -48,7 +48,7 @@
     color: black;
     font-family: Pokedex;
     margin-top: 11em;
-    margin-left: -12em;
+    margin-left: -5em;
    
     
  }
@@ -87,17 +87,13 @@
     height:225px;
     font-family: Pokedex;
     font-size: small;
-    position: static;
+    position: relative;
     border-style: solid;
     border-width: 3px;
     border-color: transparent;
     grid-row: 4/4;
     margin-left: 33.5em;
     margin-top: 4.4em;
-
-
-
-
 } 
 /* 
 .nameContainer{
@@ -105,3 +101,16 @@
     align-self: center;
 } 
    */
+.form{
+   width: 350px;
+   height: 400px;
+   margin-top: -25em;
+   margin-left: 3em;
+   border-style: solid;
+   border-color: aliceblue;
+   background-color: black;
+   color: aliceblue;
+   text-align: left;
+   padding:10px;
+   opacity:0.7
+}

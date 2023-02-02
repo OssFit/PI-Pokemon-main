@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import SearchBar from './components/SearchBar/SearchBar';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
+test('Debe tener una searchBar', () => {
+  render(<SearchBar/>);
+  const linkElement = screen.getByText("Search");
   expect(linkElement).toBeInTheDocument();
 });

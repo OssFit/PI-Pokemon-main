@@ -34,9 +34,28 @@
      margin-top: 3em;
      position: absolute;
 }
-/* img{
+ .img{
     position: absolute;
- margin-left: -22em; 
- margin-top:9em 
+margin-left: -29em;
+ margin-top:15em 
 }
-   */
+   .goHome{
+    font-family: Pokemon1;
+    color: yellow;
+    -webkit-text-stroke: 1px rgb(0, 106, 255); 
+   }
+   .home{
+    margin-left: 1em;
+    margin-top: 15em;
+   }
+.ready{
+    position: absolute;
+    text-align: center;
+    color: aliceblue;
+    font-family: Pokemon1;
+    margin-left: 3em;
+    font-size: 30px;
+    -webkit-text-stroke: 3px rgb(0, 106, 255); 
+    color: yellow;
+    margin-top: -1em;
+}

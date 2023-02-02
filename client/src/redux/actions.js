@@ -10,6 +10,9 @@ export const FILTER_BY_TYPE = "FILTER_BY_TYPE";
 export const FILTER_CREATED = "FILTER_CREATED";
 export const ORDER_ALPHABETICALLY = "ORDER_ALPHABETICALLY";
 export const ORDER_BY_ATTACK = "ORDER_BY_ATTACK";
+export const DELETE_POKEMON = "DELETE_POKEMON";
+export const UPDATE_POKEMON= "UPDATE_POKEMON";
+
 
 
 export function getAllPokemons(){
@@ -36,9 +39,10 @@ export function getPokemonById(id){
   return async function(dispatch){
     try {
       const json= await axios.get(`http://localhost:3001/pokemons/${id}`);
+      console.log(json.data)
       return dispatch({
         type:GET_POKEMON_BY_ID,
-        payload:json.data.pop()
+        payload:json.data
       })
 
     } catch (error) {
@@ -116,6 +120,45 @@ export function filterCreated(payload){
   return{
   type:FILTER_CREATED,
   payload
-  }
+  }}
 
+export function deletePokemon(id){
+  return async function(dispatch){
+    try {
+     await axios.delete(`http://localhost:3001/pokemons/${id}`);
+      return dispatch({
+        type:DELETE_POKEMON,
+        payload:"Pokemon was eliminated"
+      })
+
+    } catch (error) {
+      return dispatch({
+        type:ERROR,
+        payload:"Pokemon was not found"
+      })
+      
+    }
+   
+  }
 }
+
+  export function updatePokemon(id){
+    return async function(dispatch){
+      try {
+       const json=await axios.put(`http://localhost:3001/pokemons/${id}`);
+        return dispatch({
+          type:UPDATE_POKEMON,
+          payload:json.data
+        })
+  
+      } catch (error) {
+        return dispatch({
+          type:ERROR,
+          payload:"Pokemon was not found"
+        })
+        
+      }
+     
+    }
+}
+

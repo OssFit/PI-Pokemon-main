@@ -8,7 +8,9 @@ import {
     ORDER_ALPHABETICALLY,
     ORDER_BY_ATTACK,
     FILTER_BY_TYPE,
+    UPDATE_POKEMON,
     ERROR,
+    DELETE_POKEMON,
   } from "./actions";
 
   const initialState = {
@@ -129,6 +131,11 @@ const rootReducer=(state=initialState, action)=>{
                   ...state,
                   pokemons: FilterPokemons,
                 };
+                case DELETE_POKEMON:
+                  return { ...state
+                };
+                case UPDATE_POKEMON:
+                    return { ...state,pokemonDetail:action.payload};
           default:
             return { ...state };
           

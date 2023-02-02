@@ -22,7 +22,7 @@ const getApiData=async()=>{
        name:
        element.name.trim().toLowerCase().charAt(0).toUpperCase() +
        element.name.substring(1), //me traigo su name con el fin de que quede asi = EJEMPLO: "andres" -> "Andres"
-       hp: element.hp,
+       life: element.life,
        attack: element.attack,
        defense: element.defense,
        speed: element.speed,
