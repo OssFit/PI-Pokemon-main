@@ -20,6 +20,9 @@ export function PokemonCard({ name, image, type, id}) {
         <span className={style.name}>{name}</span>
         </div>
 
+        <div className={style.idContainer2}>
+        <p className={style.idId2}>{id}</p>
+        </div>
        
 
         <div className={style.divImg}>

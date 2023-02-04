@@ -1,13 +1,18 @@
+.divPrincipal{
+    display: flex;
+}
+
 .input{
     background-color: rgb(5, 189, 5);
     font-family: Pokedex;
     color: aliceblue;
     box-shadow: 0 0 20px rgb(106, 255, 0);
-    width: 200px;
+    width: 150px;
     border-style: solid;
     border-bottom: 3px;
     border-color: black;
     font-size: x-small;
+    margin-left: 2em;
 }
 
 
@@ -21,7 +26,8 @@
     border-radius: 50%;
     border-color: aliceblue;
     border-width: 8px;
-    margin-top: -2em;
+    margin-top:0em;
+   
 }
 .button:hover{
     box-shadow: 0 0 40px rgb(68, 196, 255)
@@ -51,12 +57,36 @@
 }
 
 .lights{
-   margin-top: -4em;
-   margin-left: 7em;
+   margin-top: 0em;
+   margin-left: 0.5em;
 }
 
 .inputContainer{
-    margin-right: -15em;
+    margin-top: 1.5em;
+    margin-left: -4em;
     
 }
 
+@media screen and (max-width: 1050px){
+.divPrincipal{
+    display:flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: left;
+    margin-top: 1em;
+    position: relative;
+   
+}
+
+.inputContainer{
+    position: absolute;
+    margin-left: 3.9em;
+    
+    
+}
+.lights{
+    margin-top: -5em;
+    margin-left: 5em;
+}
+
+}

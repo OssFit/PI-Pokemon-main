@@ -23,7 +23,7 @@ setName("");
 }
 
     return (
-        <div>
+        <div className={style.divPrincipal}>
         <button className={style.button} onClick={(e)=>handlerSubmit(e)}> Search </button>
         <div className={style.lights}>
         <button className={style.btn1}></button>

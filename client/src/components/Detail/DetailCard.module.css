@@ -13,7 +13,11 @@
     border-width: 5px;
     border-color: transparent;
     height: 100vh;
+    width: 100vw;
     align-content: center;
+    justify-content: center;
+    
+   
  }
 
  .nameContainer{
@@ -23,6 +27,9 @@
     border-color: transparent;
     grid-row: 3/3;
     height: 40px;
+    display: flex;
+   justify-content: center;
+    
   
    
  }
@@ -31,7 +38,10 @@
     font-family: Pokedex;
     font-size: small;
     color: black;
-    margin-left: -2em;
+    position: relative;
+    align-self:center;
+    justify-content: center;
+   
     
  }
  .idContainer{
@@ -47,7 +57,7 @@
  .id{
     color: black;
     font-family: Pokedex;
-    margin-top: 11em;
+    margin-top: 13em;
     margin-left: -5em;
    
     
@@ -71,36 +81,37 @@
 }
 
 
-.info{
-    text-align: justify;
-    align-self:center;
-    line-height:10px;
+.info {
+    text-align: right;
+    line-height:20px;
     border-style: solid;
     border-radius: 10px 10px 10px 35px;
     border-color: rgb(209, 216, 222);
     border-width: 5px;
     color: aliceblue;
     background-color: rgb(5, 146, 64);
-    background-size: 3px;
     padding: 7px;
-    width: 300px;
-    height:225px;
+    width:auto;
+    height:max-content;
     font-family: Pokedex;
     font-size: small;
-    position: relative;
+    position:sticky;
     border-style: solid;
     border-width: 3px;
     border-color: transparent;
     grid-row: 4/4;
-    margin-left: 33.5em;
-    margin-top: 4.4em;
-} 
-/* 
-.nameContainer{
-    text-align: center;
-    align-self: center;
-} 
-   */
+    margin-top: 6em; 
+    text-align: right;
+    text-justify: auto;
+    justify-content: center;
+    display:inline-block;
+    list-style-type: none;
+   
+
+}
+
+
+
 .form{
    width: 350px;
    height: 400px;
@@ -114,3 +125,32 @@
    padding:10px;
    opacity:0.7
 }
+
+
+ @media (max-width: 767px) {
+   .divPrincipal {
+   flex-direction: initial;
+   }
+   .nameContainer {
+     height: auto;
+     font-size: 1.2em;
+     display: flex;
+   }
+   .imgContainer {
+     height: 70px;
+     display: flex;
+     justify-content: center;
+      margin-top: 5em;
+   }
+   .info {
+     font-size: 0.8em;
+    
+     display: flexbox;
+   }
+   .form {
+     width: 90%;
+     height: auto;
+     margin-left: 0;
+   }
+ }
+  

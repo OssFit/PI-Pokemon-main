@@ -142,23 +142,11 @@ export function deletePokemon(id){
   }
 }
 
-  export function updatePokemon(id){
-    return async function(dispatch){
-      try {
-       const json=await axios.put(`http://localhost:3001/pokemons/${id}`);
-        return dispatch({
-          type:UPDATE_POKEMON,
-          payload:json.data
-        })
-  
-      } catch (error) {
-        return dispatch({
-          type:ERROR,
-          payload:"Pokemon was not found"
-        })
-        
-      }
-     
-    }
+export function updatePokemon(id, params) {
+  return async function (dispatch) {
+    const edited = await axios.put(`http://localhost:3001/pokemons/${id}`, params);
+    return dispatch({
+      type:UPDATE_POKEMON,
+      payload:edited,})
+  };
 }
-

@@ -14,7 +14,7 @@
  
 }
 
-.divPrincipal:hover{
+.divPrincipal:hover,.divPrincipal:active{
   transition: 0.3s;
   background-image: url("../Imagenes/pokeball1.png");
   
@@ -23,9 +23,23 @@
 .img{
   transition:0s;
   visibility: hidden;
+  margin-top:-11em
 
 }
-.divPrincipal:hover  .img{
+.divPrincipal:hover .img{
+  visibility: visible;
+  transition: 0.5s;
+}
+.divPrincipal:active .img{
+  visibility: visible;
+  transition: 0.5s;
+}
+
+.divPrincipal:hover  .idId{
+  visibility: visible;
+  transition: 0.5s;
+}
+.divPrincipal:active  .idId{
   visibility: visible;
   transition: 0.5s;
 }
@@ -36,11 +50,24 @@
 
 .idContainer{
   text-align: center;
-  margin-left: 2.5em;
+  margin-left: 3em;
+  visibility: hidden;
+}
+
+.idContainer2{
+  margin-top: 7em;
+  justify-content: center;
+}
+
+.idId2{
+  color: black;
+  font-size: xx-large;
+  font-weight:bolder
 }
 
 .nameContainer{
 text-align: center; 
+
 margin-top: 1em;
 
 
@@ -49,9 +76,14 @@ margin-top: 1em;
 .typeContainer{
   text-align: center;
   max-width: 100px;
-  margin-left: 1em;
-
+  margin-left: 1.5em;
+  margin-top:-1.5em;
 }
+
+.type{
+  margin-bottom: -0.5em;
+}
+
 
 .idId{
   color:aliceblue;
@@ -93,8 +125,9 @@ height: 30px;
 text-decoration: none;
 }
 
-.img:hover{
+.img:hover, .img:active{
   transform: scale(2);
   
 }
+
 

@@ -10,7 +10,7 @@ export function Paginado({pokemonsPerPage, allPokemons, paginado}){
     }
 
     return(
-        <div>
+        <div className={style.divPrincipal}>
             <ul>
                 { pageNumbers &&
                 pageNumbers.map(number =>(

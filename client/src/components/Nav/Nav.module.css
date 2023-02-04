@@ -4,6 +4,8 @@
     border-color: black;
     border-style: solid;
     height: 120px;
+    width: 100vw;
+
 }
 
 .button1{
@@ -52,6 +54,8 @@ margin-top:-2em
     border-radius: 4px;
     height: 50px;
     margin-top: 2em;
+    display:table-row-;
+    text-align:center
 }
 
 .filterAbc:hover,.filterType:hover,.filterStrength:hover,.created:hover{
@@ -60,9 +64,52 @@ margin-top:-2em
 }
 .contenedorSearch{
     display: flex;
-    margin-top: -3em;
+    margin-top: -6em;
+    
 }
 .searchBar{
     text-align: left;
    
 }
+
+@media screen and (max-width: 1050px) {
+    .divPrincipal{
+      display: flex;
+      flex-direction: column;
+      height:450px;
+      width: 100%vw;
+      
+     
+    }
+    .contenedorSearch{
+        display: flex;
+        flex-direction: column;
+    }
+    .back{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0em;
+        margin-top: 0em;
+    }
+    .button1{
+        display: flex;
+        flex-direction: column;
+        margin-top: 3em;
+        justify-content: center;
+        align-content: center;
+        margin-right: 0em;
+        margin-left:80%;
+        
+    }
+
+    .contenedorSearch{
+        display: flex;
+        flex-direction: column;
+        align-self:left;
+        
+    }
+
+    
+
+  }
+  

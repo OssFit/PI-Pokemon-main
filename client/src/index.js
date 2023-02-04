@@ -9,6 +9,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
+    <meta name="viewport" content="initial-scale=1, width=device-width"></meta>
     <Provider store={store}>
       <BrowserRouter>
     <App />
