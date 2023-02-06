@@ -87,7 +87,7 @@ export function Nav ({types, setOrder, setCurrentPage}) {
       </div>
       <div className={style.create}>
       <button className={style.button1}onClick={() => history.push("/create")}>
-          <header>CREATE</header>
+          CREATE
         </button>
         </div>
     <div className={style.contenedorSearch}>

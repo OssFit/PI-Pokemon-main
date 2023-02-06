@@ -133,16 +133,17 @@ const CreateForm = function () {
         <button className={style.button}> Back Home</button><br></br>
       </Link>
       </div>
-      <label className={style.error} hidden={!error.name ? true : false} >
-        {error.name}
-        <img className={style.errorImg} src="https://www.pngmart.com/files/16/Angry-Cartoon-PNG-File.png"/>
-      </label>
+      <div className={style.error} hidden={!error.name ? true : false} >
+        <p className={style.errorMsg}>{error.name}</p>
+        <img className={style.errorImg} hidden={!error.name ? true : false} src="https://www.pngmart.com/files/16/Angry-Cartoon-PNG-File.png"/>
+      </div>
       <div className={style.own}>
       <h1 className={style.h1}>CREATE YOUR OWN POKEMON</h1>
-      </div>
       <div className={style.imgContainer}>
       <img className={style.img}src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8dda48c-9773-45af-904d-5f1de124edfb/dexx1us-63b16964-fa4b-4784-bce9-6e4daab6ac0c.png/v1/fill/w_894,h_894,strp/artist_pikachu_by_lili_nyklova_dexx1us-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcL2U4ZGRhNDhjLTk3NzMtNDVhZi05MDRkLTVmMWRlMTI0ZWRmYlwvZGV4eDF1cy02M2IxNjk2NC1mYTRiLTQ3ODQtYmNlOS02ZTRkYWFiNmFjMGMucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.kSd4sYUsyNgRA21-nb3ch43268xnkqewBm7Pd9bnIRE"/>
       </div>
+      </div>
+      <div className={style.divForm}>
       <form className={style.form} onSubmit={(e) => handleSubmit(e)}>
         <label htmlFor="name">Name:  </label>
         <input
@@ -255,6 +256,7 @@ const CreateForm = function () {
           <span>Create</span>
         </button>
       </form>
+      </div>
     </div>
   );
 };

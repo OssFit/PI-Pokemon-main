@@ -57,7 +57,7 @@ export const Home = function () {
           />
         );
       })}
-     
+     <p className={style.pElab}>Proyecto Elaborado por Oscar Alatrista - 2023</p>
     </div>
   )
 }

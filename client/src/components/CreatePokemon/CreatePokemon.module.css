@@ -1,72 +1,120 @@
-.img{
-    width: 100px;
-    margin-left: 23em;
-    margin-top: -3em;
-}
 
 .divPrincipal{
-    display:inline-block;
+    
     background-image: url(../Imagenes/monitor.png);
-    background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
+    background-position: center;
+    grid-template-rows:auto;
+    border-style: solid;
+    border-width: 5px;
+    border-color: transparent;
     height: 100vh;
     width: 100vw;
-}
+    align-content: center;
+    justify-content: center;
     
+}
 
-.form{
-    font-size: smaller;
-    text-align: justify;
-    margin-left: 29em;
-    margin-top: -1em;
-    font-family: Pokedex;
-    color: aliceblue;
-    border: 0;
-    position: absolute;
-    
-}
-input{
-    background-color: transparent;
-    color: aliceblue;
-    font-family: Pokedex;
+.backHome{
+    grid-row: 1/1;
+    border-style: solid;
     border-color: transparent;
-}
-    select{
-        background-color: black;
-        color: aliceblue;
-    }
+    height: 8vh;
 
-.own{
-    margin-top: 7em;
-    text-align: center;
-    
-    
-}
-
-.h1{
-    font-family: Pokedex;
-    color: aliceblue;
-    font-size: small;
-    font-weight:bolder;
-    margin-left:-3em
 }
 
 .error{
 
     color:red;
     font-weight: bolder;
-    position: fixed;
-  margin-left: -8em;
-  text-align: center;
-  align-self: center;
+   
+  grid-row: 2/2;
+  border-style: solid;
+  border-color: transparent;
+  height: 8vh;
+  justify-content: center;
+  display: inline-flex;
+
 }
+
+.errorMsg{
+    align-self: center}
 
 .errorImg{
     width: 80px;
     text-align: left;
+    align-self: center;
 }
+
+.own{
+    
+   height: 13vh;
+    grid-row: 3/3;
+    border-style: solid;
+    border-color: transparent;
+
+    
+    
+}
+.img{
+   width: 10vh;
+ 
+   
+}
+.divForm{
+    font-size: smaller;
+    text-align: justify;
+    font-family: Pokedex;
+    color: aliceblue;
+    grid-row: 4/4;
+    height:40vh;
+    border-style: solid;
+    border-color: transparent;
+    align-items: center;
+    
+}
+.form{
+  border-style: solid;
+  border-color: transparent;
+  width:fit-content;
+  margin: 0px auto;
+  height: 38vh;
+  font-size:large;
+  line-height: 3vh;
+  
+}
+
+input{
+    background-color: transparent;
+    color: aliceblue;
+    font-family: Pokedex;
+   
+}
+    select{
+        background-color: black;
+        color: aliceblue;
+    }
+
+
+.h1{
+    font-family: Pokedex;
+    color: rgb(0, 0, 0);
+    font-size: small;
+    font-weight:bolder;
+    margin-left:-3em;
+    -webkit-text-stroke: 0.5px;
+    -webkit-text-stroke-color: red;   
+    
+}
+
 
 .button{
     color: black;
 }
+
+@media (max-width: 550px) {
+    .divPrincipal{
+       background-size: auto;
+    }
+    }

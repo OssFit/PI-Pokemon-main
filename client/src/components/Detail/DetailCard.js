@@ -89,21 +89,6 @@ export default function DetailCard(){
       );
     };
   
-    // const handlerType1 = (e) => {
-    //   const { value } = e.target;
-    //   setInput({
-    //     ...input,
-    //     type1: value,
-    //   });
-    // };
-  
-    // const handlerType2 = (e) => {
-    //   const { value } = e.target;
-    //   setInput({
-    //     ...input,
-    //     type2: value,
-    //   });
-    // };
   
     const handlerSubmit = (e) => {
       e.preventDefault();
@@ -135,6 +120,10 @@ export default function DetailCard(){
       }
     };
 
+    const onClickHidden=(e)=> 
+     {e.preventDefault()
+      document.getElementById("form").style.display = "none"}
+
     return (
         <div className={style.divPrincipal}key={id}>
           <div className={style.idContainer}>
@@ -161,10 +150,10 @@ export default function DetailCard(){
             );
             })}
              </ul> 
-           
+           <div className={style.btns}>
             {create===true?(<button onClick={(e)=>handlerClickDelete(e)}key="delete">Delete</button>):false}
             {create===true?(<button onClick={()=>{document.getElementById("form").style.display = "block"}}key="update">Update</button>):false}
-            
+            </div>
             <div id='form' hidden className={style.divForm}>
             <form className={style.form} onSubmit={(e) => handlerSubmit(e)}>
         <label htmlFor="name">Name:  </label>
@@ -259,15 +248,16 @@ export default function DetailCard(){
           placeholder="Paste your URL!"
           onChange={handlerChange}
           />
-          <br></br>
+         
         <button
           type="submit"
-        //   disabled={!input.name ? true : false}
+          disabled={!input.name ? true : false}
 
         >
           <span>Create</span>
         </button>
-        <button onClick={()=>  {document.getElementById("element").style.display = "none"}}>Ocultar</button>
+        <button onClick={(e)=>{onClickHidden(e)}}>Ocultar</button>
+    
       </form>
             </div>
            

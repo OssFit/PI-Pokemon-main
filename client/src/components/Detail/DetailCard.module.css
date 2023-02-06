@@ -26,9 +26,12 @@
     border-width: 3px;
     border-color: transparent;
     grid-row: 3/3;
-    height: 40px;
+    height: 15vh;
     display: flex;
-   justify-content: center;
+   justify-content:center;
+   
+   
+  
     
   
    
@@ -39,7 +42,7 @@
     font-size: small;
     color: black;
     position: relative;
-    align-self:center;
+    align-self:flex-start;
     justify-content: center;
    
     
@@ -51,7 +54,7 @@
     border-style: solid;
     border-width: 3px;
     border-color: transparent;
-    height: 250px;
+    height: 30vh;
  }
  
  .id{
@@ -72,7 +75,7 @@
 
  .imgContainer{
 
-    height:100px; ;
+    height:17vh; 
     border-style: solid;
     border-width: 3px;
     border-color: transparent;
@@ -100,12 +103,12 @@
     border-width: 3px;
     border-color: transparent;
     grid-row: 4/4;
-    margin-top: 6em; 
     text-align: right;
     text-justify: auto;
     justify-content: center;
     display:inline-block;
     list-style-type: none;
+    align-self: start;
    
 
 }
@@ -118,7 +121,7 @@
    margin-top: -25em;
    margin-left: 3em;
    border-style: solid;
-   border-color: aliceblue;
+   border-color: transparent;
    background-color: black;
    color: aliceblue;
    text-align: left;
@@ -126,9 +129,38 @@
    opacity:0.7
 }
 
+.bts{
+   grid-row: 5/5;
+   height: 5vh;
+}
 
- @media (max-width: 767px) {
-   .divPrincipal {
+
+  @media (max-width: 550px) {
+.divPrincipal{
+   background-size: auto;
+}
+.idContainer{
+   height: 37vh;
+display: flex;
+justify-content: center;
+align-items: end;
+
+}
+.id{
+ position: absolute;
+margin-bottom: 0em
+ 
+ 
+
+   
+}
+.imgContainer{
+height: 10vh;   
+}
+.nameContainer{
+   height: 10vh;
+}
+   /* .divPrincipal {
    flex-direction: initial;
    }
    .nameContainer {
@@ -143,7 +175,7 @@
       margin-top: 5em;
    }
    .info {
-     font-size: 0.8em;
+     font-size: xx-small;
     
      display: flexbox;
    }
@@ -151,6 +183,5 @@
      width: 90%;
      height: auto;
      margin-left: 0;
-   }
+   } */
  }
-  

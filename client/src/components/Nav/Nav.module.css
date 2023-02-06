@@ -20,7 +20,7 @@ border-color: rgb(0, 0, 0);
 font-size: smaller;
 margin-right: 1em;
 margin-top: -1em;
-
+text-align: center;
 }
 .button1:hover{
     box-shadow: 0 0 40px rgb(255, 221, 0)
@@ -95,6 +95,7 @@ margin-top:-2em
         display: flex;
         flex-direction: column;
         margin-top: 3em;
+        text-align: center;
         justify-content: center;
         align-content: center;
         margin-right: 0em;
