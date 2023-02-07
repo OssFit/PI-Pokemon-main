@@ -7,6 +7,7 @@ import { Paginado } from '../Pagination/Pagination.js';
 import { filterByType } from '../../redux/actions';
 import { Nav } from '../Nav/Nav'
 import style from './Home.module.css'
+import Loading from '../Loading/Loading';
 
 
 
@@ -38,6 +39,8 @@ export const Home = function () {
 
   return (
     <div>
+     
+      
       
       
       <Nav types={allTypes} setOrder={setOrder} setCurrentPage={setCurrentPage} />
@@ -47,8 +50,9 @@ export const Home = function () {
         allPokemons={AllPokemons.length}
         paginado={paginado}
       />
-      
-      {currentPokemons.map((pokemon) => {
+       {!AllPokemons.length?(
+      <Loading></Loading>):
+      currentPokemons.map((pokemon) => {
         return (
           <PokemonCard
             key={pokemon.id}
@@ -62,6 +66,7 @@ export const Home = function () {
       })}
      <p className={style.pElab}>Proyecto Elaborado por Oscar Alatrista - 2023</p>
     </div>
+
   )
 }
 
