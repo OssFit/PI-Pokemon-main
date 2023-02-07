@@ -12,7 +12,11 @@
     font-family: "Pokemon1";
     src:url(../Fonts/Pokemon\ Solid.ttf)
 }
-
+.fondo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .video{
     position: fixed;
     right: 0;
@@ -31,31 +35,55 @@
     
 }  */
 .home{
-     margin-top: 3em;
-     position: absolute;
+   
+     position: relative;
+   margin-top: 80vh;
+     /* left:40vw; */
+    
+
 }
- .img{
-    position: absolute;
-margin-left: -29em;
- margin-top:15em 
-}
+ 
    .goHome{
+    text-align: center;
     font-family: Pokemon1;
     color: yellow;
     -webkit-text-stroke: 1px rgb(0, 106, 255); 
+   text-decoration: none;
+   background-color:transparent;
+   border-color: transparent;
+    font-size: xx-large;
    }
-   .home{
-    margin-left: 1em;
-    margin-top: 15em;
-   }
+  
 .ready{
-    position: absolute;
+    right: 5%;
+    justify-content: center;
+    position: fixed;
     text-align: center;
     color: aliceblue;
     font-family: Pokemon1;
-    margin-left: 3em;
+   
     font-size: 30px;
-    -webkit-text-stroke: 3px rgb(0, 106, 255); 
+    -webkit-text-stroke: 1px rgb(0, 106, 255); 
     color: yellow;
     margin-top: -1em;
+    text-decoration: none;
 }
+
+
+@media screen and (max-width: 640px) {
+    
+    .video{
+left: -145vw;
+
+    }
+
+    .ready{
+        font-size:medium;
+        -webkit-text-stroke: 0.5px rgb(0, 106, 255);
+        text-align: center;
+        line-height: 3em;
+        margin-left: 0em;
+        padding: 1em;
+    }
+   
+  }

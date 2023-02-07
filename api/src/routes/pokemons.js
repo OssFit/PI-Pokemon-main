@@ -26,6 +26,9 @@ router.get('/', async (req, res) => {
         }
 
     }
+    else{
+        return res.status(400).json({msg:error.message})
+    }
 });
 
 router.get('/:id', async (req, res) => {
