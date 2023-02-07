@@ -1,11 +1,12 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import style from './LandingPage.module.css';
+import fondo from '../Imagenes/fondoLanding.mp4'
 
 export const LandingPage=function(){
     return(
         <div className={style.fondo}>
-             <video className={style.video} src="https://assets.pokemon.com//assets/cms2-es-es/img/misc/virtual-backgrounds/tcg/sun-moon-team-up.mp4" autoPlay={true} muted={true} loop={true} />
+             <video className={style.video} src={fondo} autoPlay={true} muted={true} loop={true} />
             <NavLink to={'/home'} >
                 <div className={style.ready}>
                 <h1>Are You Ready for Know the Pokemon World?</h1>
