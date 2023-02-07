@@ -2,10 +2,12 @@ import { useState }from 'react';
 import { getPokemonByName } from '../../redux/actions';
 import { useDispatch } from 'react-redux';
 import style from './SearchBar.module.css'
+import { useSelector } from 'react-redux';
 
 export default function SearchBar({setCurrentPage}){
 const dispatch=useDispatch();
 const[name, setName]=useState("");
+const error=useSelector(state=>state.error)
 
 
 
@@ -19,6 +21,7 @@ const handlerSubmit=(event)=>{
     event.preventDefault()
     setCurrentPage(1);
 dispatch(getPokemonByName(name));
+if(error===true)alert("Pokemon not found!")
 setName("");
 }
 

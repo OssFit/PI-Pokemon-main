@@ -45,15 +45,19 @@ const rootReducer=(state=initialState, action)=>{
         case GET_POKEMON_BY_ID:
           return { ...state, pokemonDetail: action.payload };
     
-        case GET_POKEMON_BY_NAME:
-          if (!action.payload.includes(null)) {
-            return {
-              ...state,
-              pokemons: action.payload,
-            };
-          } else {
-            return { ...state, error: true };
-          };
+          case GET_POKEMON_BY_NAME:
+            if (action.payload.length > 0) {
+              return {
+                ...state,
+                pokemons: action.payload,
+                error: false
+              };
+            } else {
+              return {
+                ...state,
+                error: true
+              };
+            }
           case GET_TYPES:
       return {
         ...state,
