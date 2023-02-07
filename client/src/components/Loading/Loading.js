@@ -4,7 +4,7 @@ import gif from "../Imagenes/pokemon-1.gif";
 
 const Loading = () => {
   return (
-    <diV>
+    <div>
      
     <figure >
     <img src={gif} alt="Cargando" position='absolute'/>
@@ -12,7 +12,7 @@ const Loading = () => {
       Cargando Pokemons ...
     </figcaption>
   </figure>
-  </diV>
+  </div>
   )
 }
 
