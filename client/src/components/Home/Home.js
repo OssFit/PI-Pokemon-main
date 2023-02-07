@@ -27,6 +27,8 @@ export const Home = function () {
 
   useEffect(() => {
     dispatch(getAllPokemons())
+    {alert("If you're from PC:Hover the cursor to open the pokeball and Click to Open Details.")};
+    {alert("If you're from Mobile:Tap for one second to open the pokeball and tap again to Open Datils")}
   }, [dispatch]);
 
   useEffect(() => {
@@ -36,6 +38,7 @@ export const Home = function () {
 
   return (
     <div>
+      
       
       <Nav types={allTypes} setOrder={setOrder} setCurrentPage={setCurrentPage} />
       <Paginado
