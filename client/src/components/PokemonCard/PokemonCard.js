@@ -2,6 +2,7 @@ import style from "./PokemonCard.module.css"
 import { NavLink } from 'react-router-dom'
 
 
+
 export function PokemonCard({ name, image, type, id}) {
 
   
