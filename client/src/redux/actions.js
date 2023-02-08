@@ -42,7 +42,8 @@ export function getPokemonById(id){
       console.log(json.data)
       return dispatch({
         type:GET_POKEMON_BY_ID,
-        payload:json.data
+        payload:json.data,
+    
       })
 
     } catch (error) {
@@ -89,6 +90,12 @@ export function getTypes(){
   }
 }
 
+export function CleanType(payload) {
+  return {
+    type: GET_POKEMON_BY_ID,
+    payload:{}
+  };
+}
 export function filterByType(payload) {
   return {
     type: FILTER_BY_TYPE,
