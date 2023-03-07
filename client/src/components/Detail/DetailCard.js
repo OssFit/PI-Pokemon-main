@@ -4,6 +4,7 @@ import { useParams,useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { getPokemonById,deletePokemon, updatePokemon, getAllPokemons, getTypes } from "../../redux/actions";
 import style from "./DetailCard.module.css"
+import Loading from "../Loading/Loading";
 
 export default function DetailCard(){
     const { id } = useParams();
@@ -124,13 +125,15 @@ export default function DetailCard(){
      {e.preventDefault()
       document.getElementById("form").style.display = "none"}
 
-    return (
+   
+   return (
         <div className={style.divPrincipal}key={id}>
           <div className={style.idContainer}>
             <p className={style.id}>ID:{id.length>3?id.slice(0,4)+"...":id}</p>
             </div>
             <div className={style.imgContainer}>
-            <img className={style.img} src={image} alt={name} />
+              {!pokemon.hasOwnProperty('name')?(<Loading className={style} />):
+            (<img className={style.img} src={image} alt={name} />)}
              </div> 
             <div className={style.nameContainer}>
             <h2 className={style.name}>{name}</h2>
@@ -154,6 +157,7 @@ export default function DetailCard(){
             {create===true?(<button onClick={(e)=>handlerClickDelete(e)}key="delete">Delete</button>):false}
             {create===true?(<button onClick={()=>{document.getElementById("form").style.display = "block"}}key="update">Update</button>):false}
             </div>
+            {/* ------------------------------------------------------------------------------------------------------------------------------------------- */}
             <div id='form' hidden className={style.divForm}>
             <form className={style.form} onSubmit={(e) => handlerSubmit(e)}>
         <label htmlFor="name">Name:  </label>

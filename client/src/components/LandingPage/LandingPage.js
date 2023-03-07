@@ -9,7 +9,7 @@ export const LandingPage=function(){
              <video className={style.video} src={fondo} autoPlay={true} muted={true} loop={true} />
             <NavLink to={'/home'} >
                 <div className={style.ready}>
-                <h1>Are You Ready for Know the Pokemon World?</h1>
+                <h1>R You Ready for Know the Pokemon World?</h1>
                 </div>
 
                 {/* <img className={style.img}src='https://www.pngall.com/wp-content/uploads/5/Pikachu-PNG-Download-Image.png' alt='pikachu' width='100px' /> */}
