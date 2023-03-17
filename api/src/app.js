@@ -15,7 +15,7 @@ server.use(cookieParser());
 server.use(morgan('dev'));
 server.use(cors());
 
-app.use(function(req, res, next) {
+server.use(function(req, res, next) {
   res.header('Access-Control-Allow-Origin', 'https://pi-pokemon.pages.dev');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   next();
