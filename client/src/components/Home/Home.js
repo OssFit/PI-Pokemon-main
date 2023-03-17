@@ -29,12 +29,12 @@ export const Home = function () {
   useEffect(() => {
     dispatch(getAllPokemons())
     
-  }, [dispatch]);
+  }, []);
 
   useEffect(() => {
     dispatch(getTypes());
 
-  }, [dispatch]);
+  }, []);
 
 
   useEffect(()=>{
