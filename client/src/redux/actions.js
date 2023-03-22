@@ -13,7 +13,7 @@ export const ORDER_BY_ATTACK = "ORDER_BY_ATTACK";
 export const DELETE_POKEMON = "DELETE_POKEMON";
 export const UPDATE_POKEMON= "UPDATE_POKEMON";
 
-
+//probando nuevo servicio para el back
 
 export function getAllPokemons(){
   return async function(dispatch){
